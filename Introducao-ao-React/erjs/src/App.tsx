@@ -14,7 +14,7 @@ console.log(HTMLElement)
 document.body.appendChild(HTMLElement)
 
 //@ts-ignore
-document.body.appendChild(Component)
+//document.body.appendChild(Component)
 
 function App() {
   return (
