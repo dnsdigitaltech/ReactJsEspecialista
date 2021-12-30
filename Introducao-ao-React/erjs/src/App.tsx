@@ -1,29 +1,12 @@
-import logo from './logo.svg';
 import './App.css';
-import React from 'react';
-
-const Component = React.createElement('div', {style: {background: 'red'}}, null, 'Olá, mundo!')
-
-const HTMLElement = document.createElement('div')
-HTMLElement.style.background = 'red'
-HTMLElement.innerHTML = "Olá, mundo!"
-
-console.log(Component)
-console.log(HTMLElement)
-
-document.body.appendChild(HTMLElement)
-
-//@ts-ignore
-//document.body.appendChild(Component)
+import Clock from './Clock';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
 
-        { Component }
-
-        <img src={logo} className="App-logo" alt="logo" />
+        <Clock />
         <p>
           Olá mundo
         </p>
