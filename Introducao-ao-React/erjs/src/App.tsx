@@ -1,25 +1,27 @@
+import { useState } from 'react';
 import './App.css';
-import Clock from './Clock';
-import Person from './Person';
+import Post from './components/Post';
+import Sidebar from './components/Sidebar';
 
 function App() {
+
+  const [post, setPost] = useState({
+    title: 'Título Maneiro',
+    content: 'Lorem Ipsum dolor sit amet'
+  })
+
+  /*setTimeout(() => {
+    setPost({
+      title: 'Título Maneiro22',
+      content: 'Lorem Ipsum dolor sit amet22'
+    })
+  }, 5000)*/
+
   return (
     <div className="App">
       <header className="App-header">
-
-        <Clock />
-        <Person />
-        <p>
-          Olá mundo
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <Sidebar post={post}/>
+        <Post post={post} totalComments={12} />
       </header>
     </div>
   );
