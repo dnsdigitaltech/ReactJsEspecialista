@@ -1,5 +1,6 @@
 import './App.css';
 import Clock from './Clock';
+import Person from './Person';
 
 function App() {
   return (
@@ -7,6 +8,7 @@ function App() {
       <header className="App-header">
 
         <Clock />
+        <Person />
         <p>
           Olá mundo
         </p>
